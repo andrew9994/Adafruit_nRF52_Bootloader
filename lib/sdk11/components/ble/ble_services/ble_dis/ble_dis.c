@@ -34,9 +34,9 @@ static ble_gatts_char_handles_t manufact_name_handles;
 static ble_gatts_char_handles_t model_num_handles;
 static ble_gatts_char_handles_t fw_rev_handles;
 static ble_gatts_char_handles_t pnp_id_handles;
+static ble_gatts_char_handles_t serial_num_handles;
 
 #if 0
-static ble_gatts_char_handles_t serial_num_handles;
 static ble_gatts_char_handles_t hw_rev_handles;
 static ble_gatts_char_handles_t sw_rev_handles;
 static ble_gatts_char_handles_t sys_id_handles;
@@ -187,7 +187,7 @@ uint32_t ble_dis_init(const ble_dis_init_t * p_dis_init)
         }
     }
 
-#if 0
+#if 1
     if (p_dis_init->serial_num_str.length > 0)
     {
         err_code = char_add(BLE_UUID_SERIAL_NUMBER_STRING_CHAR,
@@ -200,6 +200,8 @@ uint32_t ble_dis_init(const ble_dis_init_t * p_dis_init)
             return err_code;
         }
     }
+#endif
+#if 0
     if (p_dis_init->hw_rev_str.length > 0)
     {
         err_code = char_add(BLE_UUID_HARDWARE_REVISION_STRING_CHAR,
