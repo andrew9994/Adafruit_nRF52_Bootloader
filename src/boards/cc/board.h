@@ -26,6 +26,11 @@
  #define _FEATHER_NRF52840_SENSE_H
  
  #define _PINNUM(port, pin)    ((port)*32 + (pin))
+
+ //--------------------------------------------------------------------+
+ // POWER CONFIGURATION
+ //--------------------------------------------------------------------+
+ #define BOARD_HAS_VDDH        1
  
  /*------------------------------------------------------------------*/
  /* LED
@@ -42,15 +47,15 @@
  /*------------------------------------------------------------------*/
  /* BUTTON
   *------------------------------------------------------------------*/
- #define BUTTONS_NUMBER        2
+ #define BUTTONS_NUMBER        0
  #define BUTTON_1              _PINNUM(1, 02)
- #define BUTTON_2              _PINNUM(0, 10)
+ #define BUTTON_2              _PINNUM(1, 12)
  #define BUTTON_PULL           NRF_GPIO_PIN_PULLUP
  
  //--------------------------------------------------------------------+
  // BLE OTA
  //--------------------------------------------------------------------+
- #define BLEDIS_MANUFACTURER   "PETTECH"
+ #define BLEDIS_MANUFACTURER   "LGTM TECH"
  #define BLEDIS_MODEL          "CC"
  
  //--------------------------------------------------------------------+
